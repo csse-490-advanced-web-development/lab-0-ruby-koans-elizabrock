@@ -3,7 +3,7 @@
     {
       "name": "Rake",
       "setup": "",
-      "run": "rake test",
+      "run": "rake test | tee output.txt; grep 'Mountains are again merely mountains' output.txt",
       "input": "",
       "output": "",
       "comparison": "exact",

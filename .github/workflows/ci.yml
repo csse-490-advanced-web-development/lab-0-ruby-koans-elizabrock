@@ -10,7 +10,7 @@ jobs:
       - name: Install Ruby!
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
+          ruby-version: "3.1.4"
 
       - name: run tests
-        run: rake test
+        run: rake test | tee output.txt; grep 'Mountains are again merely mountains' output.txt
